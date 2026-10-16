@@ -1,0 +1,42 @@
+name: 识别 / 音质不对
+description: 变谱识别错、转录跑调、音色或混音结果不满意
+title: "[quality] "
+labels: ["kind/quality", "source/web"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        这类问题**原始素材和参数**比描述更重要：请说明用的是哪份谱/哪首歌、选了哪个模型与参数。
+        如果方便，把出问题的页面截图或原始文件片段附上（注意别带上你不希望公开的内容）。
+  - type: dropdown
+    id: area
+    attributes:
+      label: 模块
+      options: [变谱, 转录, 转换, 音色, 调教]
+    validations: { required: true }
+  - type: dropdown
+    id: severity
+    attributes:
+      label: 影响
+      options: ["blocker 完全不能用", "major 明显不对", "minor 细节瑕疵"]
+    validations: { required: true }
+  - type: textarea
+    id: what
+    attributes:
+      label: 哪里不对
+      description: 越具体越好（第几页/第几小节、哪个声部、哪个时间段）。
+    validations: { required: true }
+  - type: textarea
+    id: params
+    attributes:
+      label: 用的模型与参数
+      placeholder: "例：变谱 → Audiveris 增强 · 放大 自动 · 影像预处理 自动 · 超分辨率 自动"
+    validations: { required: true }
+  - type: textarea
+    id: expected
+    attributes:
+      label: 你期望的结果
+  - type: input
+    id: contact
+    attributes:
+      label: 联系方式（选填）
