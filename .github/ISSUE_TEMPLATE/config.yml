@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 应用内一键反馈（推荐）
+    url: https://github.com/qdTXTbp/FuFumidi
+    about: 打开 FuFumidi → 设置 → 反馈：填好点上传，自动附带脱敏后的体检报告
+  - name: 已知问题
+    url: https://github.com/qdTXTbp/FuFumidi/blob/release/5.0.0/docs/known-issues.md
+    about: 报之前先看一眼，可能已经有结论与绕过办法
