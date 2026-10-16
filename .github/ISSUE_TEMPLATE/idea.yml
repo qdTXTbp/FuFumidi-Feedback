@@ -1,0 +1,25 @@
+name: 功能建议
+description: 想要的新功能、想改的交互
+title: "[idea] "
+labels: ["kind/idea", "source/web"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: 涉及模块
+      options: [转录, 变谱, 转换, 音色, 调教, 播放, 曲库, 编辑, 更新, 资源中心, 其它]
+    validations: { required: true }
+  - type: textarea
+    id: need
+    attributes:
+      label: 你想解决什么问题
+      description: 先说场景与痛点，再说想要的功能 —— 有时换种做法更好实现。
+    validations: { required: true }
+  - type: textarea
+    id: idea
+    attributes:
+      label: 你设想的做法（选填）
+  - type: input
+    id: contact
+    attributes:
+      label: 联系方式（选填）
