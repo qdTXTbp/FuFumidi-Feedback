@@ -1,0 +1,54 @@
+name: 功能异常 / 崩溃
+description: 某个功能报错、无响应或直接崩溃
+title: "[bug] "
+labels: ["kind/bug", "source/web"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        应用内 **设置 → 反馈** 上传会自动带上体检报告，比手填更省事。
+        这里手填时，**体检报告能极大提高定位速度**：设置 → 反馈 → 一键体检 → 复制报告粘贴到下面。
+  - type: dropdown
+    id: area
+    attributes:
+      label: 模块
+      options: [转录, 变谱, 转换, 音色, 调教, 播放, 曲库, 编辑, 更新, 资源中心, 其它]
+    validations: { required: true }
+  - type: dropdown
+    id: severity
+    attributes:
+      label: 严重度
+      options: ["blocker 用不了", "major 很影响", "minor 小问题"]
+    validations: { required: true }
+  - type: textarea
+    id: symptom
+    attributes:
+      label: 症状
+      description: 发生了什么？界面上的原话、报错文本都可以贴。
+    validations: { required: true }
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      placeholder: "1. 打开… 2. 点… 3. 结果…"
+    validations: { required: true }
+  - type: textarea
+    id: expect
+    attributes:
+      label: 期望 vs 实际
+  - type: dropdown
+    id: freq
+    attributes:
+      label: 频率
+      options: ["每次", "偶尔", "只出现过一次"]
+  - type: textarea
+    id: health
+    attributes:
+      label: 体检报告（选填但强烈建议）
+      description: 应用内「设置 → 反馈 → 一键体检」→ 复制报告粘到这里；已自动去掉用户名与机器名。
+      render: markdown
+  - type: input
+    id: contact
+    attributes:
+      label: 联系方式（选填）
+      placeholder: 邮箱或 GitHub ID；留空即匿名
